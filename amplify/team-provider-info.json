@@ -24,7 +24,7 @@
       "function": {
         "getCovidTestResultIntent": {
           "deploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
-          "s3Key": "amplify-builds/getCovidTestResultIntent-4958707345643472664e-build.zip"
+          "s3Key": "amplify-builds/getCovidTestResultIntent-2f613379474551307164-build.zip"
         }
       }
     }

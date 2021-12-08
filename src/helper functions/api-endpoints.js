@@ -1,7 +1,7 @@
-export const ADD_STUDENT_API= {
-    API_NAME : "studentFormApi",
+export const UPDATE_COVID_STATUS_API= {
+    API_NAME : "addCovidStatusToDbAPI",
     ENDPOINTS : {
-        'ADD' :'/add'
+        'UPDATE' :'/update'
     }
 }
 

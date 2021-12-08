@@ -4,6 +4,7 @@ import "./test-details.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { API } from "aws-amplify";
+import UPDATE_COVID_STATUS_API from "../../helper functions/api-endpoints"
 
 class StudentDetails extends React.Component {
   INITIAL_STATE = {
@@ -22,34 +23,29 @@ class StudentDetails extends React.Component {
     event.preventDefault();
     const { userRefId, name, status } = this.state;
 
-    // const data = {
-    //   body: {
-    //     regno: regno.toUpperCase(),
-    //     name: name.toUpperCase(),
-    //     password: password,
-    //     marks: {
-    //       SWE2002,
-    //       SWE3002,
-    //       SWE4002,
-    //     },
-    //   },
-    // };
-    // console.log(data.body);
+    const data = {
+      body: {
+          userRefId : userRefId,
+          name : name,
+          status : status
+        },
+    }
+    console.log(data.body);
 
-    // const response = await API.post(
-    //   ADD_STUDENT_API.API_NAME,
-    //   ADD_STUDENT_API.ENDPOINTS.ADD,
-    //   data
-    // );
+    const response = await API.post(
+      UPDATE_COVID_STATUS_API.API_NAME,
+      UPDATE_COVID_STATUS_API.ENDPOINTS.UPDATE,
+      data
+    );
 
-    // if(!response.error){
-    //   alert("Student details added");
-    //   this.setState(this.INITIAL_STATE);
-    // }
-    // else{
-    //   alert("Operation Failed")
-    //   console.log(response.error)
-    // }
+    if(response.status ==="200"){
+      alert("Patient Data is updated");
+      this.setState(this.INITIAL_STATE);
+    }
+    else{
+      alert("Operation Failed")
+      console.log(response.error)
+    }
   };
 
   handleChange = (event) => {
