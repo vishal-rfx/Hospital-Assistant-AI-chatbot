@@ -10,6 +10,23 @@
       "StackName": "amplify-hospitalassistantbot-dev-201058",
       "StackId": "arn:aws:cloudformation:us-east-1:215863192520:stack/amplify-hospitalassistantbot-dev-201058/e00af180-5834-11ec-8808-12f3408cfe69",
       "AmplifyAppId": "d1cowdmss0e9n1"
+    },
+    "categories": {
+      "auth": {
+        "undefined": {}
+      },
+      "interactions": {
+        "hospitalassistantbot": {
+          "deploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
+          "s3Key": "amplify-builds/hospitalassistantbot-4f67545049627635465a-build.zip"
+        }
+      },
+      "function": {
+        "getCovidTestResultIntent": {
+          "deploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
+          "s3Key": "amplify-builds/getCovidTestResultIntent-33714d366f44454f5054-build.zip"
+        }
+      }
     }
   }
 }

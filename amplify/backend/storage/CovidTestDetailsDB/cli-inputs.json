@@ -1,0 +1,10 @@
+{
+  "resourceName": "CovidTestDetailsDB",
+  "tableName": "CovidTestDetailsTable",
+  "partitionKey": {
+    "fieldName": "user_ref_id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

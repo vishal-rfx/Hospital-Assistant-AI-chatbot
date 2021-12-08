@@ -45,7 +45,7 @@ export default class ChatContent extends Component {
   };
 
   handleSendMsg = async () => {
-    const BOT_NAME = "studentChatbot_dev"
+    const BOT_NAME = "hospitalAssistantBot_dev"
     if (this.state.msg !== "") {
       const msg = this.state.msg;
       this.sendMsg();

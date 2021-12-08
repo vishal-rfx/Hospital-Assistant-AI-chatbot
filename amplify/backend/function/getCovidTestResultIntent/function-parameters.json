@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "interactions": {
+      "hospitalassistantbot": [
+        "create",
+        "read",
+        "update"
+      ]
+    },
+    "storage": {
+      "CovidTestDetailsDB": [
+        "create",
+        "read",
+        "update"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

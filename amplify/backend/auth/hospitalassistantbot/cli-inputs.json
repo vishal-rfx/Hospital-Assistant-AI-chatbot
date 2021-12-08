@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "hospitalassistantbot_identitypool_02fdf5df",
+    "allowUnauthenticatedIdentities": true,
+    "authSelections": "identityPoolOnly",
+    "resourceName": "hospitalassistantbot",
+    "sharedId": "02fdf5df",
+    "serviceName": "Cognito",
+    "useDefault": "manual"
+  }
+}
