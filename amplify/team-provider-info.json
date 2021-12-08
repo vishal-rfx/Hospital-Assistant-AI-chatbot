@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hospitalassistantbot-dev-201058-authRole",
+      "UnauthRoleArn": "arn:aws:iam::215863192520:role/amplify-hospitalassistantbot-dev-201058-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::215863192520:role/amplify-hospitalassistantbot-dev-201058-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
+      "UnauthRoleName": "amplify-hospitalassistantbot-dev-201058-unauthRole",
+      "StackName": "amplify-hospitalassistantbot-dev-201058",
+      "StackId": "arn:aws:cloudformation:us-east-1:215863192520:stack/amplify-hospitalassistantbot-dev-201058/e00af180-5834-11ec-8808-12f3408cfe69",
+      "AmplifyAppId": "d1cowdmss0e9n1"
+    }
+  }
+}

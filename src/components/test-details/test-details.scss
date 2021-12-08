@@ -1,0 +1,48 @@
+.add {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 40px;
+    max-width: 30%;
+}
+.add .title{
+    margin: 10px 0;
+    color: #4665ff;
+}
+
+.add .add-form{
+    
+    justify-content: center;
+}
+$sub-color: grey;
+$main-color: black;
+
+@mixin shrinkLabel {
+  top: -14px;
+  font-size: 12px;
+  color: $sub-color;
+}
+
+.form-input {
+    background: none;
+    background-color: white;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 2;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $sub-color;
+    margin: 20px 0;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus ~ .form-input-label {
+      @include shrinkLabel();
+    }
+  }

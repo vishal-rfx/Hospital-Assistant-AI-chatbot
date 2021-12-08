@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import ChatBody from "./components/chat-body/chat-body.component";
+import StudentDetails from "./components/test-details/test-details.component";
+
+import { Route,Routes} from "react-router";
+
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="__main">
+      <Routes>
+        <Route exact path="/" element={<ChatBody/>} />
+        <Route exact path="/add" element={<StudentDetails/>} />
+      </Routes>
     </div>
   );
 }
