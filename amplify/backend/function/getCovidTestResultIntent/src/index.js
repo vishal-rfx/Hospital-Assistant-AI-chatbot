@@ -136,20 +136,19 @@ const validateUserRefId = async (userRefId) => {
   const params = {
     TableName: process.env.STORAGE_COVIDTESTDETAILSDB_NAME,
     Key: {
-      user_ref_id: id,
+      user_ref_id: id
     },
   };
 
   const data = await docClient.get(params).promise();
-
-  if (Object.keys(data.Item).length === 0) {
+  if (Object.keys(data).length === 0) {
     return {
       isValid: false,
       violatedSlot: "UserRefID",
       message: {
         contentType: "PlainText",
         content:
-          "Patient Reference ID should not contain alphabets, Please provide a valid Patient Reference ID",
+          "Patient Reference ID seems to be wrong, Please provide a valid Patient Reference ID",
       },
     };
   }
@@ -160,14 +159,14 @@ const validateUserRefId = async (userRefId) => {
   };
 };
 
-const getTestResultIntent = (intentReq) => {
+const getTestResultIntent = async (intentReq) => {
   const source = intentReq.invocationSource;
-  if (source === "DialogueCodeHook") {
+  if (source === "DialogCodeHook") {
     const slots = intentReq.currentIntent.slots;
     const userRefId = intentReq.currentIntent.slots.UserRefID;
-    const validateResult = validateUserRefId(userRefId);
-
-    if (!validateResult.isValid) {
+    const validateResult = await validateUserRefId(userRefId);
+    // return validateResult.isValid
+    if (validateResult.isValid===false) {
       slots.UserRefID = null;
       return elicitSlot(
         intentReq.sessionAttributes,
