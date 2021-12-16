@@ -1,7 +1,6 @@
 import "./App.css";
 
 import ChatBody from "./components/chat-body/chat-body.component";
-import TestDetails from "./components/test-details/test-details.component";
 
 import { Route,Routes} from "react-router";
 
@@ -15,7 +14,6 @@ function App() {
     <div className="__main">
       <Routes>
         <Route exact path="/" element={<ChatBody/>} />
-        <Route exact path="/add" element={<TestDetails/>} />
       </Routes>
     </div>
   );
