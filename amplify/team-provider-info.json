@@ -25,6 +25,10 @@
         "getCovidTestResultIntent": {
           "deploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
           "s3Key": "amplify-builds/getCovidTestResultIntent-2f613379474551307164-build.zip"
+        },
+        "updateCovidTestResults": {
+          "deploymentBucketName": "amplify-hospitalassistantbot-dev-201058-deployment",
+          "s3Key": "amplify-builds/updateCovidTestResults-74312b4272472b435441-build.zip"
         }
       }
     }

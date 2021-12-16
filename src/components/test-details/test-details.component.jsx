@@ -4,13 +4,13 @@ import "./test-details.scss";
 import FormInput from "../form-input/form-input.component";
 import CustomButton from "../custom-button/custom-button.component";
 import { API } from "aws-amplify";
-import UPDATE_COVID_STATUS_API from "../../helper functions/api-endpoints"
+import {UPDATE_COVID_STATUS_API} from "../../helper functions/api-endpoints"
 
-class StudentDetails extends React.Component {
+class TestDetails extends React.Component {
   INITIAL_STATE = {
     userRefId: "",
     name: "",
-    status: "",
+    status: "0",
   };
 
   constructor(props) {
@@ -41,6 +41,9 @@ class StudentDetails extends React.Component {
     if(response.status ==="200"){
       alert("Patient Data is updated");
       this.setState(this.INITIAL_STATE);
+      //this.props.history.push('/')
+      console.log(this.props.history)
+
     }
     else{
       alert("Operation Failed")
@@ -51,6 +54,8 @@ class StudentDetails extends React.Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
+    // console.log(name,value)
+    // console.log(this.state)
   };
 
   render() {
@@ -76,10 +81,10 @@ class StudentDetails extends React.Component {
             required
           />
 
-          <select className="form-input">
+          <select className="form-input" name="status" onChange={this.handleChange}>
             <option value="0">Processing</option>
             <option value="-1">Negative</option>
-            <option value="1">Positive</option>
+            <option value="1" >Positive</option>
           </select>
 
           <CustomButton type="submit">Update</CustomButton>
@@ -89,4 +94,4 @@ class StudentDetails extends React.Component {
   }
 }
 
-export default StudentDetails;
+export default TestDetails;

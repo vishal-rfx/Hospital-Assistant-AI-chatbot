@@ -12,12 +12,12 @@ export default class ChatContent extends Component {
     {
       key: 1,
       type: "other",
-      msg: "Hello, I am Jenny ",
+      msg: "Hello",
     },
     {
       key: 2,
       type: "other",
-      msg: "How can I help you?",
+      msg: "I am Jenny",
     },
   ];
 
